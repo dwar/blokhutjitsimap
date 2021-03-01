@@ -1,6 +1,8 @@
 # Blokhut Jitsi Map
 Interactieve kaart van de blokhut om verschillende ruimtes/plekken virtueel binnen te gaan. Voor de iScout editie van 2021 tijdens Covid-19
 
+hello from dev
+
 ## Inkscape
 De svg files zijn alleen nog bewerkt met inkscape. Blokhut.svg is de bron, de afbeeldingen voor mobiel en desktop moeten handmatig gemaakt worden.
 
