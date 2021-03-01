@@ -751,7 +751,7 @@
          onmouseover="this.style.opacity = 1;"
          onmouseout="this.style.opacity = 0;"
          style="opacity:0"
-         onclick="window.location='https://meetme.bit.nl/AIiScout_Kleinezaal#Intent;scheme=org.jitsi.meet;package=org.jitsi.meet;end'"
+         onclick="window.location='intent://meetme.bit.nl/AIiScout_Kleinezaal#Intent;scheme=org.jitsi.meet;package=org.jitsi.meet;end'"
          transform="translate(-117.36893,13.209488)">
         <svg:path
            style="fill:#b0b0b0;fill-opacity:0.995984;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -786,7 +786,7 @@
          onmouseover="this.style.opacity = 1;"
          onmouseout="this.style.opacity = 0;"
          style="opacity:0"
-         onclick="window.location='https://meetme.bit.nl/AIiScout_Grotezaal#Intent;scheme=org.jitsi.meet;package=org.jitsi.meet;end'"
+         onclick="window.location='intent://meetme.bit.nl/AIiScout_Grotezaal#Intent;scheme=org.jitsi.meet;package=org.jitsi.meet;end'"
          transform="translate(-117.36893,13.209488)">
         <svg:path
            style="fill:#b2b2b2;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
