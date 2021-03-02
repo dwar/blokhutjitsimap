@@ -1,19 +1,21 @@
 # Blokhut Jitsi Map
 Interactieve kaart van de blokhut om verschillende ruimtes/plekken virtueel binnen te gaan. Voor de iScout editie van 2021 tijdens Covid-19
 
-## Inkscape
-De svg files zijn alleen nog bewerkt met inkscape. Blokhut.svg is de bron, de afbeeldingen voor mobiel en desktop moeten handmatig gemaakt worden.
-- Blokhut_M.svg is voor mobiel (Smal zonder hover)
-- Blokhut_Desktop.svg is voor de desktop (Breedt met hover)
+## Kaartje
+Er zijn een aantal kaartje van de blokhut met linkjes naar verschillende jitsi ruimtes. (convigureerbaar in parse.py)
+- phone.svg is voor mobiel (Smal)
+- desktop.svg is voor de desktop (Breedt)
+- android.svg voor android met de jitsi app (deep link)
 
 ### Interactie
-Onder de laag Desktop bevinden zich de lagen met de overlays. (D-Keuken enz) Op deze laag staat als het goed is 1 group met een 1 path en 1 text. De group is opacity = 1
+Het bestand parse.py maakt van het bestant Blokhut.py de 3 output bestanden. 
 
-Events van de group:
+De onclick van de ruimtes worden gemaakt met parse.py (de bestaande worden overschreven)
 - onclick
   ```
   window.location='https://meetme.bit.nl/AIiScout_Keuken'
   ```
+De hover over de ruimte wordt verkregen door de transparantie van de elementen '''hover_'''
 - onmouseout
   ```
   this.style.opacity = 0;
