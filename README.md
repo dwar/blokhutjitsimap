@@ -3,9 +3,9 @@ Interactieve kaart van de blokhut om verschillende ruimtes/plekken virtueel binn
 
 ## Kaartje
 Er zijn een aantal kaartje van de blokhut met linkjes naar verschillende jitsi ruimtes. (convigureerbaar in parse.py)
-- phone.svg is voor mobiel (Smal)
-- desktop.svg is voor de desktop (Breedt)
-- android.svg voor android met de jitsi app (deep link)
+- [phone.svg](https://dwar.github.io/blokhutjitsimap/phone.svg) is voor mobiel (Smal)
+- [desktop.svg](https://dwar.github.io/blokhutjitsimap/desktop.svg) is voor de desktop (Breedt)
+- [android.svg](https://dwar.github.io/blokhutjitsimap/android.svg) voor android met de jitsi app (deep link)
 
 ### Interactie
 Het bestand parse.py maakt van het bestant Blokhut.py de 3 output bestanden. 
@@ -13,7 +13,7 @@ Het bestand parse.py maakt van het bestant Blokhut.py de 3 output bestanden.
 De onclick van de ruimtes worden gemaakt met parse.py (de bestaande worden overschreven)
 - onclick
   ```
-  window.location='https://meetme.bit.nl/AIiScout_Keuken'
+  window.location='https://meetme.bit.nl/AriensIngrisIscout_Keuken'
   ```
 De hover over de ruimte wordt verkregen door de transparantie van de elementen '''hover_'''
 - onmouseout
