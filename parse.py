@@ -13,8 +13,26 @@ ns_array = {
     'inkscape': 'http://www.inkscape.org/namespaces/inkscape'
 }
 
-pre = "window.location='https://meetme.bit.nl/AriensIngridIscout2021"
+jitsi_host = "meetme.bit.nl"
+event_prefix = 'AriensIngridIscout2021'
+
+pre = "window.location='https://" + jitsi_host + "/" + event_prefix
 post = "#config.prejoinPageEnabled=false&config.startWithVideoMuted=false&config.startWithAudioMuted=false'"
+input = 'Blokhut.svg'
+
+pre_desktop = pre
+post_desktop = post
+output_desktop = "desktop.svg"
+
+pre_phone = pre
+post_phone = post
+output_phone = "phone.svg"
+
+pre_android = "window.location='intent://"  + jitsi_host + "/" + event_prefix
+post_android = "#config.prejoinPageEnabled=false&config.startWithVideoMuted=false&config.startWithAudioMuted=false#Intent;scheme=org.jitsi.meet;package=org.jitsi.meet;end"
+output_android = "android.svg"
+
+
 
 def main(): 
     # Open original file
@@ -24,24 +42,49 @@ def main():
     for ns, url in ns_array.items():
         ElementTree.register_namespace(ns,url)
 
+    base_dir = os.path.dirname(__file__)
+    input_file = os.path.join(base_dir, 'Blokhut.svg')
+
+    map_make_desktop(input_file, os.path.join(base_dir, output_desktop))
+    map_make_android(input_file, os.path.join(base_dir, output_android))
+    map_make_phone(input_file, os.path.join(base_dir, output_phone))
+
+
+
+def map_make_generic(src):
+    print(src)
+    el = ElementTree.parse(src)
+    root = el.getroot()
+
     # Remove src images from svg
     map_id_del(root, "layer_bron")
     map_id_del(root, "layer_background")
     map_id_del(root, "script2")
 
     map_layer_showall(root)
+    return el, root
 
-    if False:
-         map_outline_from(root, "outline_phone")
-         map_id_del(root, "layer_desktop")
-         map_hover_addlink(root, pre, post)
-        #  map_hover_addlink(root, "window.location='https://meetme.bit.nl/AiIscout", "#config.startWithVideoMuted=true&config.startWithAudioMuted=true'")
-         el.write(os.path.join(os.path.dirname(__file__),  "phone.svg"))
-    else:
-         map_outline_from(root, "outline_desktop")
-         map_id_del(root, "layer_phone")
-         map_hover_addlink(root, pre, post)
-         el.write(os.path.join(os.path.dirname(__file__),  "desktop.svg"))
+def map_make_desktop(src, dest):
+    el, root = map_make_generic(src)
+    map_outline_from(root, "outline_desktop")
+    map_id_del(root, "layer_phone")
+    map_hover_addlink(root, pre_desktop, post_desktop)
+
+    el.write(dest)
+
+def map_make_phone(src, dest):
+    el, root = map_make_generic(src)
+    map_outline_from(root, "outline_phone")
+    map_id_del(root, "layer_desktop")
+    map_hover_addlink(root, pre_phone, post_phone)
+    el.write(dest)
+
+def map_make_android(src, dest):
+    el, root = map_make_generic(src)
+    map_outline_from(root, "outline_phone")
+    map_id_del(root, "layer_desktop")
+    map_hover_addlink(root, pre_android, post_android)
+    el.write(dest)
 
 def map_outline_from(root, outline):
     req = root.findall(".//*[@id='"+outline+"']", ns_array)[0]
@@ -77,3 +120,5 @@ def map_hover_addlink(root,pre,post):
 
 if __name__=="__main__": 
     main(); 
+
+
