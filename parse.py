@@ -29,7 +29,7 @@ post_phone = post
 output_phone = "phone.svg"
 
 pre_android = "window.location='intent://"  + jitsi_host + "/" + event_prefix
-post_android = "#config.prejoinPageEnabled=false&config.startWithVideoMuted=false&config.startWithAudioMuted=false#Intent;scheme=org.jitsi.meet;package=org.jitsi.meet;end"
+post_android = "#config.prejoinPageEnabled=false&config.startWithVideoMuted=false&config.startWithAudioMuted=false#Intent;scheme=org.jitsi.meet;package=org.jitsi.meet;end'"
 output_android = "android.svg"
 
 
