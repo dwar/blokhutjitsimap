@@ -6,6 +6,7 @@ Er zijn een aantal kaartje van de blokhut met linkjes naar verschillende jitsi r
 - [phone.svg](https://dwar.github.io/blokhutjitsimap/phone.svg) is voor mobiel (Smal)
 - [desktop.svg](https://dwar.github.io/blokhutjitsimap/desktop.svg) is voor de desktop (Breedt)
 - [android.svg](https://dwar.github.io/blokhutjitsimap/android.svg) voor android met de jitsi app (deep link)
+
 Eenmaal in een ruimte kan de met de terugknop weer terug naar het kaartje, om in een andere ruimte te kijken.
 
 ### Techniek
