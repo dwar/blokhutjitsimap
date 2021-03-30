@@ -11,4 +11,4 @@ Eenmaal in een ruimte kan de met de terugknop weer terug naar het kaartje, om in
 
 ### Techniek
 Het bestand parse.py maakt van het bestand Blokhut.svg de 3 output bestanden. (phone.svg, desktop.svg en android.svg) 
-Blokhut.svg is gemaakt met inkscape en kan daar ook nog mee bewerkt worden. De url waar de ruimte naar verwijst wordt gegenereerd in parse.py. Dit gebeurd aan de hand van de '''inscape:label''' van de '''hover_*''' uit Blokhut.svg en jitsi_host, event_prefix (en pre en post) uit parse.py
+Blokhut.svg is gemaakt met inkscape en kan daar ook nog mee bewerkt worden. De url waar de ruimte naar verwijst wordt gegenereerd in parse.py. Dit gebeurd aan de hand van de uit Blokhut.svg en jitsi_host, event_prefix (en pre en post) uit parse.py
